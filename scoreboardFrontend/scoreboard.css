@@ -1,0 +1,103 @@
+.sb-backdrop{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.65);
+  display:flex; align-items:center; justify-content:center;
+  z-index:999999;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.sb-card{
+  width:min(92vw, 420px);
+  background:#121212;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;
+  padding:14px;
+  box-shadow:0 14px 44px rgba(0,0,0,.45);
+}
+
+.sb-title{ font-size:18px; font-weight:800; margin:0 0 6px; }
+.sb-subtitle{ font-size:13px; opacity:.85; margin:0 0 10px; }
+.sb-scoreline{ font-size:13px; opacity:.95; margin:0 0 10px; }
+
+.sb-input{
+  width:100%;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  padding:10px 12px;
+  outline:none;
+  font-size:14px;
+  box-sizing:border-box;
+}
+
+.sb-actions{
+  display:flex; gap:10px; justify-content:flex-end;
+  margin-top:12px;
+}
+
+.sb-btn{
+  border-radius:12px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.16);
+  cursor:pointer;
+  font-weight:700;
+  font-size:13px;
+  background: rgba(255,255,255,.08);
+  color:#fff;
+}
+
+.sb-btn-primary{ background:#2f7cff; border-color:#2f7cff; }
+.sb-btn-secondary{ background:transparent; }
+
+.sb-hint{ font-size:11px; opacity:.7; margin-top:10px; }
+
+.sb-list-head,
+.sb-row{
+  display:grid;
+  grid-template-columns:60px 1fr 90px;
+  gap:8px;
+  align-items:center;
+}
+
+.sb-list-head{
+  font-size:12px;
+  opacity:.75;
+  padding:6px 4px;
+}
+
+.sb-row{
+  padding:10px 6px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+
+.sb-row.is-you{
+  background:rgba(47,124,255,.14);
+  outline:2px solid rgba(47,124,255,.65);
+  outline-offset:-2px;
+}
+
+.sb-pill{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:999px;
+  font-size:11px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.08);
+  opacity:.9;
+}
+
+.sb-close-row{
+  display:flex; justify-content:flex-end;
+  margin-top:12px;
+}
+
+.sb-shake{ animation: sbshake .22s linear; }
+@keyframes sbshake {
+  0%{transform:translateX(0)}
+  25%{transform:translateX(-6px)}
+  50%{transform:translateX(6px)}
+  75%{transform:translateX(-4px)}
+  100%{transform:translateX(0)}
+}
